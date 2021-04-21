@@ -3,8 +3,8 @@ class JiraOffline < Formula
 
   desc "Git-like CLI for using Jira offline"
   homepage "https://pypi.org/project/jira-offline"
-  url "https://github.com/mafrosis/jira-offline/releases/download/0.2.3/jira_offline-0.2.3-py3-none-any.whl"
-  sha256 "e08ac2cbd29a0d3245d7cac9b33f51b3ca41a92644153528d064f9a4e15b6b9a"
+  url "https://github.com/mafrosis/jira-offline/releases/download/0.2.4/jira-offline-0.2.4.tar.gz"
+  sha256 "626efdd868f57a313be5d84083dc96b3769f4fd116303f2c6e5beec2259ac17e"
   license "MIT"
 
   depends_on "python@3.8"
