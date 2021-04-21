@@ -1,1 +1,2 @@
 pipdeptree>=2
+jira-offline
