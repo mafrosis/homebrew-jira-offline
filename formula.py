@@ -57,7 +57,7 @@ def main():
     tree = pipdeptree.PackageDAG.from_pkgs(pkgs).filter({'jira-offline'}, None)
     deps = get_unique_dependencies(tree)
 
-    for name, version in deps.items():
+    for name, version in sorted(deps.items()):
         print(f'# {name}=={version}')
 
         resp = requests.get(f'https://pypi.org/pypi/{name}/{version}/json')
