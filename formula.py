@@ -24,7 +24,7 @@ DEP_MAPPING = {
         'chardet==4.0.0': 'chardet-4.0.0-py2.py3-none-any.whl',
         'click==7.1.2': 'click-7.1.2-py2.py3-none-any.whl',
         'cryptography==3.4.7': 'cryptography-3.4.7-cp36-abi3-macosx_10_10_x86_64.whl',
-        'dictdiffer==0.8.1': 'dictdiffer-0.8.1-py2.py3-none-any.whl',
+        'dictdiffer-jira-offline-fork==0.0.1': 'dictdiffer_jira_offline_fork-0.0.1-py2.py3-none-any.whl',
         'feather-format==0.4.1': 'feather-format-0.4.1.tar.gz',
         'idna==2.10': 'idna-2.10-py2.py3-none-any.whl',
         'mypy-extensions==0.4.3': 'mypy_extensions-0.4.3-py2.py3-none-any.whl',

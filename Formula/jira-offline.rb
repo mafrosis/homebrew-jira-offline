@@ -3,8 +3,8 @@ class JiraOffline < Formula
 
   desc "Git-like CLI for using Jira offline"
   homepage "https://pypi.org/project/jira-offline"
-  url "https://github.com/mafrosis/jira-offline/releases/download/0.2b1/jira_offline-0.2b1-py3-none-any.whl"
-  sha256 "cc7d80f7cc2a9fb3a905966db35fe669b9bb820dc6752c24fa7eb31e8efe68f3"
+  url "https://github.com/mafrosis/jira-offline/releases/download/0.2.3/jira_offline-0.2.3-py3-none-any.whl"
+  sha256 "e08ac2cbd29a0d3245d7cac9b33f51b3ca41a92644153528d064f9a4e15b6b9a"
   license "MIT"
 
   depends_on "python@3.8"
@@ -51,10 +51,10 @@ class JiraOffline < Formula
     sha256 "3d8427734c781ea5f1b41d6589c293089704d4759e34597dce91014ac125aad1"
   end
 
-  # dictdiffer==0.8.1
-  resource "dictdiffer" do
-    url "https://files.pythonhosted.org/packages/97/92/350b6b6ec39c5f87d98d04c91a50c498518716a05368e6dea88b5c69b590/dictdiffer-0.8.1-py2.py3-none-any.whl"
-    sha256 "d79d9a39e459fe33497c858470ca0d2e93cb96621751de06d631856adfd9c390"
+  # dictdiffer-jira-offline-fork==0.0.1
+  resource "dictdiffer-jira-offline-fork" do
+    url "https://files.pythonhosted.org/packages/b3/15/225d52734e25e20dbbeb6dff8e450ca87e2c8d110a8604abd547a44a273e/dictdiffer_jira_offline_fork-0.0.1-py2.py3-none-any.whl"
+    sha256 "654a77a275e714d212607e6e3c57f24f32e60b10e318aeea378780d30b8b0d7b"
   end
 
   # feather-format==0.4.1
