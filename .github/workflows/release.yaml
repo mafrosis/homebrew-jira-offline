@@ -1,0 +1,46 @@
+---
+name: release
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Display current python info
+      run: |
+        python -VV
+        pip -V
+
+    - name: Install package
+      run: |
+        python3 -m pip install jira-offline
+
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Extract version to determine if release needed
+      id: extract
+      run: |
+        git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+        echo "##[set-output name=version;]$(make version)"
+        echo "##[set-output name=needs_release;]$(if git tag | grep -q $(make version); then echo 0; else echo 1; fi)"
+
+    - name: Log extracted variables
+      run: |
+        echo version=${{ steps.extract.outputs.version }}
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@master
+      if: steps.extract.outputs.needs_release == 1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.extract.outputs.version }}
+        release_name: ${{ steps.extract.outputs.version }}
+        draft: false
+        prerelease: false
