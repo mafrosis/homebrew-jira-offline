@@ -215,7 +215,7 @@ class JiraOffline < Formula
     venv = virtualenv_create(libexec, 'python3.8')
 
     resources.each do |r|
-      if r.name == "feather-format"
+      if r.name == "feather-format" or r.name.match(/^mo(.*)/)
         venv.pip_install "%s/jira-offline--%s--%s.tar.gz" % [HOMEBREW_CACHE, r.name, r.version]
       else
         # extract real wheel name from the resource URL
