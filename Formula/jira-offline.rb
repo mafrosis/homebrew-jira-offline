@@ -3,8 +3,8 @@ class JiraOffline < Formula
 
   desc "Git-like CLI for using Jira offline"
   homepage "https://pypi.org/project/jira-offline"
-  url "https://github.com/mafrosis/jira-offline/releases/download/0.2.4/jira-offline-0.2.4.tar.gz"
-  sha256 "626efdd868f57a313be5d84083dc96b3769f4fd116303f2c6e5beec2259ac17e"
+  url "https://github.com/mafrosis/jira-offline/releases/download/0.2.5/jira-offline-0.2.5.tar.gz"
+  sha256 "d95bd3a4a0c2be1efbd10dce368487e9170726f3e16d542615d9d33037d745bd"
   license "MIT"
 
   depends_on "python@3.8"
@@ -21,16 +21,16 @@ class JiraOffline < Formula
     sha256 "271b8e05174d48e50324ed0dc5d74796c839c7e579a4f21cf1a7394665f9e94f"
   end
 
-  # certifi==2020.12.5
+  # certifi==2021.5.30
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl"
-    sha256 "719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
+    url "https://files.pythonhosted.org/packages/05/1b/0a0dece0e8aa492a6ec9e4ad2fe366b511558cdc73fd3abc82ba7348e875/certifi-2021.5.30-py2.py3-none-any.whl"
+    sha256 "50b1e4f8446b06f41be7dd6338db18e0990601dce795c2b1686458aa7e8fa7d8"
   end
 
-  # cffi==1.14.5
+  # cffi==1.14.6
   resource "cffi" do
-    url "https://files.pythonhosted.org/packages/57/cc/4c80c4796ca182433502cd20119a2f4b2bab6caa097745ecaf23fc692ae1/cffi-1.14.5-cp38-cp38-macosx_10_9_x86_64.whl"
-    sha256 "8b198cec6c72df5289c05b05b8b0969819783f9418e0409865dac47288d2a053"
+    url "https://files.pythonhosted.org/packages/ca/e1/015e2ae23230d9de8597e9ad8c0b81d5ac181f08f2e6e75774b7f5301677/cffi-1.14.6-cp38-cp38-macosx_10_9_x86_64.whl"
+    sha256 "ba6f2b3f452e150945d58f4badd92310449876c4c954836cfb1803bdd7b422f0"
   end
 
   # chardet==4.0.0
@@ -39,10 +39,10 @@ class JiraOffline < Formula
     sha256 "f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
   end
 
-  # click==7.1.2
+  # click==8.0.1
   resource "click" do
-    url "https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl"
-    sha256 "dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"
+    url "https://files.pythonhosted.org/packages/76/0a/b6c5f311e32aeb3b406e03c079ade51e905ea630fc19d1262a46249c1c86/click-8.0.1-py3-none-any.whl"
+    sha256 "fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6"
   end
 
   # cryptography==3.4.7
@@ -67,6 +67,42 @@ class JiraOffline < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl"
     sha256 "b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
+  end
+
+  # mo-dots==4.19.21059
+  resource "mo-dots" do
+    url "https://files.pythonhosted.org/packages/6d/52/3be9b28667ddb4076be68ce242b7b0bdef5d68304993253b7ea72edc58e1/mo-dots-4.19.21059.tar.gz"
+    sha256 "880e61a2db83e7806b0a7c89adf936a6947a0f4925eac9088f4dfd694fe15ab6"
+  end
+
+  # mo-future==3.147.20327
+  resource "mo-future" do
+    url "https://files.pythonhosted.org/packages/74/4e/ea41d847475228c72326d05b5c8f89ea3332637eefa3da6413a5b645b5d0/mo-future-3.147.20327.tar.gz"
+    sha256 "4aafcf859e4657bc11b04ee9791321e2d44702604ae01cac7c412468cb6a513f"
+  end
+
+  # mo-imports==3.149.20327
+  resource "mo-imports" do
+    url "https://files.pythonhosted.org/packages/e2/8a/52ec0e84bc8837d19da57ea9c1644c75b513d4f7aab7b3e24a437a4a047b/mo-imports-3.149.20327.tar.gz"
+    sha256 "32e3dc720c84765224d29ed7e9d6972a369d41d756e6f26ddb5b7aa01241331d"
+  end
+
+  # mo-kwargs==3.93.20259
+  resource "mo-kwargs" do
+    url "https://files.pythonhosted.org/packages/aa/af/d9080b47778a6c02e6614f62306452fef99a1ad62937a9ec10c4461c9c1d/mo-kwargs-3.93.20259.tar.gz"
+    sha256 "c7802ad3211f25536a73ae5775efa398ca59f5b23551957f79e53d4ccf179d2e"
+  end
+
+  # mo-logs==4.20.21059
+  resource "mo-logs" do
+    url "https://files.pythonhosted.org/packages/43/b3/7c805cda965aec98767b79290dd77464554f6dd7466da1001f64625c7174/mo-logs-4.20.21059.tar.gz"
+    sha256 "5f008428610042c9104ca87ee4e85602a030be2597ecc760aa163e2d6d51bfce"
+  end
+
+  # moz-sql-parser==4.21.21059
+  resource "moz-sql-parser" do
+    url "https://files.pythonhosted.org/packages/11/60/2160c92076ba48b505bb14a0bd2651df066f7dddb82954ed0a635619a688/moz-sql-parser-4.21.21059.tar.gz"
+    sha256 "54bb667989e503a2d09718a769c1f3caaa5338f8fddc20e87dfd2591c3cbfa3e"
   end
 
   # mypy-extensions==0.4.3
@@ -105,10 +141,10 @@ class JiraOffline < Formula
     sha256 "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
   end
 
-  # python-dateutil==2.8.1
+  # python-dateutil==2.8.2
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl"
-    sha256 "75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"
+    url "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl"
+    sha256 "961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
   end
 
   # pytz==2021.1
@@ -129,10 +165,10 @@ class JiraOffline < Formula
     sha256 "7f71572defaecd16372f9006f33c2ec8c077c3cfa6f5911a9a90202beb513f3d"
   end
 
-  # six==1.15.0
+  # six==1.16.0
   resource "six" do
-    url "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl"
-    sha256 "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+    url "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl"
+    sha256 "8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
   end
 
   # tabulate==0.8.9
@@ -147,10 +183,10 @@ class JiraOffline < Formula
     sha256 "8f3c5815e3b5e20bc40463fa6b42a352178859692a68ffaa469706e6d38342a5"
   end
 
-  # typing-extensions==3.7.4.3
+  # typing-extensions==3.10.0.0
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl"
-    sha256 "7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"
+    url "https://files.pythonhosted.org/packages/2e/35/6c4fff5ab443b57116cb1aad46421fb719bed2825664e8fe77d66d99bcbc/typing_extensions-3.10.0.0-py3-none-any.whl"
+    sha256 "779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84"
   end
 
   # typing-inspect==0.6.0
@@ -165,10 +201,10 @@ class JiraOffline < Formula
     sha256 "e2cb6c6b5b604af38597403e9852872d7f534962ae2954c7f35efcb1ccacf4a4"
   end
 
-  # urllib3==1.26.4
+  # urllib3==1.26.6
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/09/c6/d3e3abe5b4f4f16cf0dfc9240ab7ce10c2baa0e268989a4e3ec19e90c84e/urllib3-1.26.4-py2.py3-none-any.whl"
-    sha256 "2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"
+    url "https://files.pythonhosted.org/packages/5f/64/43575537846896abac0b15c3e5ac678d787a4021e906703f1766bfb8ea11/urllib3-1.26.6-py2.py3-none-any.whl"
+    sha256 "39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"
   end
 
   def install
