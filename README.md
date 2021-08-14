@@ -24,6 +24,8 @@ Unpacking objects: 100% (44/44), done.
 Tapped 1 formula (75 files, 73.5KB).
 ```
 
+### Testing a tap
+
 Given Homebrew simply clones this git repo, there is an opportunity to test from a different branch:
 
 ```
@@ -46,7 +48,7 @@ HEAD is now at ed1a7a7 [feature] README on testing new homebrew releases
 At this point, `brew install` will execute `Formula/jira-offline.rb` on the `testing` branch of
 this repo.
 
-    brew install mafrosis/jira-offline
+    brew install --verbose --debug mafrosis/homebrew-jira-offline/jira-offline
 
 
 ## Creating a new release
@@ -59,18 +61,33 @@ First update the actual release tarball URL and sha256:
 curl -L https://github.com/mafrosis/jira-offline/releases/download/0.2.4/jira-offline-0.2.4.tar.gz | sha256sum
 ```
 
-Next update the top of `formula.py` to modify any dependencies. One can check the git history between
-release tags for changes to the `requirements.txt`:
+Next, check changes to dependencies. One can check the git history between release tags for changes
+to the `requirements.txt`:
 
 ```
 git ls 0.2.3..0.2.4 requirements.txt
 ```
 
-Now, run `formula.py` and paste the output into `Formula/jira-offline.rb`.
+Now, create a new venv and install the current version of `jira-offline`.:
 
 ```
-source venv/bin/activate
-pip install -U -r requirements.txt
+rm -rf venv
+/usr/local/opt/python@3.8/bin/python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run `formula.py` repeatedly until it succeeds. Each error is a dependency change which must be patched
+into the header dict `DEP_MAPPING` in `formula.py`. Use the output from `pip install` to update the
+dependencies:
+
+```
+./formula.py
+```
+
+Finally, run `formula.py` and paste the output into `Formula/jira-offline.rb`, replacing all the previous
+dependency stanzas.
+
+```
 ./formula.py | pbcopy
 ```
 
@@ -82,7 +99,10 @@ git commit -m '[release] 0.2.4'
 git push origin testing
 ```
 
-Post merge to `main`, tag the release commit such that the `release` pipeline is triggered.
+Test the formula locally per the [notes above](#testing-a-tap).
+
+Once complete, merge `testing` to `main` and tag the release commit, so the tags stay in sync
+between this repo and `jira-offline`.
 
 ```
 git tag 0.2.4
